@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Greeting App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Welcome User</h1>
+    <p>Type your name below to receive a greeting.</p>
+
+    <input type="text" id="nameInput" placeholder="Your name">
+
+    <button onclick="sendName()">Show Greeting</button>
+</div>
+
+<script>
+function sendName() {
+    const name = document.getElementById("nameInput").value;
+
+    if(name === ""){
+        alert("Please enter a name");
+        return;
+    }
+
+    window.location.href = `greet.html?name=${name}`;
+}
+</script>
+
+</body>
+</html>
